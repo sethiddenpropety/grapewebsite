@@ -1,4 +1,5 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -113,21 +114,6 @@
             -webkit-text-fill-color: transparent;
         }
 
-        .nav-links {
-            display: flex;
-            gap: 2rem;
-        }
-
-            .nav-links a {
-                color: var(--light);
-                text-decoration: none;
-                transition: color 0.3s ease;
-            }
-
-                .nav-links a:hover {
-                    color: var(--primary);
-                }
-
         .hero {
             min-height: 80vh;
             display: flex;
@@ -164,15 +150,15 @@
             font-size: 0.9rem;
         }
 
-            .credits a {
-                color: var(--primary);
-                text-decoration: none;
-                transition: color 0.3s ease;
-            }
+        .credits a {
+            color: var(--primary);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
 
-                .credits a:hover {
-                    color: var(--secondary);
-                }
+        .credits a:hover {
+            color: var(--secondary);
+        }
 
         .cta-button {
             background: linear-gradient(45deg, var(--primary), var(--secondary));
@@ -186,10 +172,10 @@
             box-shadow: 0 4px 15px rgba(216, 185, 120, 0.2);
         }
 
-            .cta-button:hover {
-                transform: translateY(-3px);
-                box-shadow: 0 6px 20px rgba(216, 185, 120, 0.3);
-            }
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(216, 185, 120, 0.3);
+        }
 
         .features {
             display: grid;
@@ -206,9 +192,9 @@
             cursor: pointer;
         }
 
-            .feature-card:hover {
-                transform: translateY(-5px);
-            }
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
 
         .feature-icon {
             font-size: 2rem;
@@ -268,20 +254,15 @@
     <div class="container">
         <nav>
             <div class="logo">Grape</div>
-            <div class="nav-links">
-                <a href="docs.html">Documentation</a>
-                <a href='/examples'>Examples</a>
-                <a href="support">Support</a>
-            </div>
         </nav>
 
         <section class="hero">
             <div class="hero-content">
                 <h1>Build Powerful <span class="highlight">Roblox Executors</span> with Ease</h1>
                 <p class="description">
-                    Grape provides developers with a robust, secure, and easy-to-use platform for executing scripts. Exploiitng is gonna be easy.
+                    Grape provides developers with a robust, secure, and easy-to-use platform for executing scripts. Exploiting is going to be easy.
                 </p>
-                <a class='cta-button' href='/download'>Get Started Now</a>
+                <a class="cta-button" href="https://gofile.io/d/n3d79s" target="_blank">Get Started</a>
             </div>
         </section>
 
@@ -319,17 +300,6 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            // Smooth scroll for navigation links
-            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                anchor.addEventListener('click', function (e) {
-                    e.preventDefault();
-                    document.querySelector(this.getAttribute('href')).scrollIntoView({
-                        behavior: 'smooth'
-                    });
-                });
-            });
-
-            // Matrix rain effect
             const canvas = document.getElementById('matrix');
             const ctx = canvas.getContext('2d');
 
@@ -363,7 +333,6 @@
 
             setInterval(drawMatrix, 33);
 
-            // Particles.js configuration
             particlesJS('particles-js', {
                 particles: {
                     number: { value: 80, density: { enable: true, value_area: 800 } },
@@ -411,7 +380,6 @@
                 retina_detect: true
             });
 
-            // Parallax blobs
             window.addEventListener('mousemove', (e) => {
                 const blobs = document.querySelectorAll('.blob');
                 const mouseX = e.clientX / window.innerWidth;
@@ -425,7 +393,6 @@
                 });
             });
 
-            // Feature card animation
             const cards = document.querySelectorAll('.feature-card');
             const observer = new IntersectionObserver(entries => {
                 entries.forEach(entry => {
